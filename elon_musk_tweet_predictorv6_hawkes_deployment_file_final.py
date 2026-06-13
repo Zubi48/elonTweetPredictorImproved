@@ -51,7 +51,7 @@ PLATFORM              = "X"
 _DATA_DIR             = Path(os.environ.get("DATA_DIR", Path(__file__).resolve().parent))
 CSV_FILE              = str(_DATA_DIR / "elonmusk_tweet_history.csv")
 MODEL_FILE            = str(_DATA_DIR / "bayesian_model.pkl")
-LOG_FILE              = str(_DATA_DIR / "tweet_predictor.log")
+LOG_FILE              = str(_DATA_DIR / "tweet_predictor_improved.log")
 EVENT_LOG_FILE        = str(_DATA_DIR / "event_factors.log")
 
 NEWS_API_KEY          = "INSERT HERE"
