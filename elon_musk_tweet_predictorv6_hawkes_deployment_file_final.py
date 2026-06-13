@@ -49,10 +49,10 @@ ELON_HANDLE           = "elonmusk"
 PLATFORM              = "X"
 
 _DATA_DIR             = Path(os.environ.get("DATA_DIR", Path(__file__).resolve().parent))
-CSV_FILE              = str(_DATA_DIR / "elonmusk_tweet_history.csv")
+CSV_FILE              = str(_DATA_DIR / "elonmusk_tweet_history_improved.csv")
 MODEL_FILE            = str(_DATA_DIR / "bayesian_model_improved.pkl")
 LOG_FILE              = str(_DATA_DIR / "tweet_predictor_improved.log")
-EVENT_LOG_FILE        = str(_DATA_DIR / "event_factors.log")
+EVENT_LOG_FILE        = str(_DATA_DIR / "event_factors_improved.log")
 
 NEWS_API_KEY          = "INSERT HERE"
 NEWS_API_BASE_URL     = "https://newsapi.org/v2/everything"
