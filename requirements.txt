@@ -1,0 +1,6 @@
+aiohttp
+scipy
+numpy
+pandas
+pytz
+vaderSentiment

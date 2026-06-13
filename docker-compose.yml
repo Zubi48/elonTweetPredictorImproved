@@ -1,0 +1,24 @@
+services:
+  elon-tweet-predictor:
+    build: .
+    image: elon-tweet-predictor:latest
+    container_name: elon-tweet-predictor
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - DATA_DIR=/app/data
+    volumes:
+      - elon-tweet-predictor-data:/app/data
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  elon-tweet-predictor-data:
+    external: true
+    name: elon-tweet-predictor-data
