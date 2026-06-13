@@ -2,7 +2,7 @@ services:
   elon-tweet-predictor:
     build: .
     image: elon-tweet-predictor:latest
-    container_name: elon-tweet-predictor
+    container_name: elon-tweet-predictor-v6
     restart: unless-stopped
     environment:
       - PUID=1000
