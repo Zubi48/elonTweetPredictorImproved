@@ -133,7 +133,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s — %(message)s",
     handlers=[
-        logging.FileHandler(LOG_FILE, encoding="utf-8"),
+        logging.FileHandler(LOG_FILE, encoding="utf-8", mode="w"),
         logging.StreamHandler(sys.stdout),
     ],
 )
@@ -141,7 +141,7 @@ logger = logging.getLogger("TweetPredictor")
 
 event_logger = logging.getLogger("EventFactor")
 event_logger.setLevel(logging.INFO)
-_efh = logging.FileHandler(EVENT_LOG_FILE, encoding="utf-8")
+_efh = logging.FileHandler(EVENT_LOG_FILE, encoding="utf-8", mode="w")
 _efh.setFormatter(logging.Formatter("%(asctime)s — %(message)s"))
 event_logger.addHandler(_efh)
 event_logger.propagate = True
